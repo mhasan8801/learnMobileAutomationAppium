@@ -15,11 +15,12 @@ public class AppiumDriverEx {
         try {
             //SetDesiredCapabilities to send to appium server
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-            desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
-            desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
-            desiredCapabilities.setCapability("appPackage"," com.wdiodemoapp");
-            desiredCapabilities.setCapability("appActivity","com.wdiodemoapp.MainActivity");
-            desiredCapabilities.setCapability(MobileCapabilityType.UDID,"emulator-5554");
+            desiredCapabilities.setCapability(MobileCapabilityTypeEx.PLATFORM_NAME,"Android");
+            desiredCapabilities.setCapability(MobileCapabilityTypeEx.AUTOMATION_NAME,"UiAutomator2");
+            desiredCapabilities.setCapability(MobileCapabilityTypeEx.APP_PACKAGE," com.wdiodemoapp");
+            desiredCapabilities.setCapability(MobileCapabilityTypeEx.APP_ACTIVITY,"com.wdiodemoapp.MainActivity");
+            desiredCapabilities.setCapability(MobileCapabilityTypeEx.UDID,"emulator-5554");
+            desiredCapabilities.setCapability(MobileCapabilityTypeEx.NEW_COMMAND_TIMEOUT, 120);
 
             //Set up the appium server url to connect to
             URL appiumServer = new URL("http://localhost:4723/wd/hub");
