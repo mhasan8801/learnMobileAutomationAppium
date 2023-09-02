@@ -24,11 +24,23 @@ public class LoginPage {
         return appiumDriver.findElement(usernameSelById);
     }
 
+    public void inputUsername(String usernameText){
+        this.username().sendKeys(usernameText);
+    }
+
     public MobileElement password() {
         return appiumDriver.findElement(passwordSelById);
     }
 
+    public void inputPassword(String passwordText){
+        this.password().sendKeys(passwordText);
+    }
+
     public MobileElement loginBtn() {
         return appiumDriver.findElement(loginBtnSelById);
+    }
+
+    public void clickLoginBtn(){
+        this.loginBtn().click();
     }
 }
