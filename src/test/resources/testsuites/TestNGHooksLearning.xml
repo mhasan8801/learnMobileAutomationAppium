@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1"> <!--All BeforeSuite hooks are executed this time-->
+    <test name="Test01"> <!--All BeforeTest hooks are executed this time-->
+        <classes>
+            <class name="testnghooks.Login_01"/>
+            <class name="testnghooks.SignUp_01"/>
+        </classes> <!--All AfterTest hooks are executed this time-->
+    </test> <!--All AfterTest hooks are executed this time-->
+</suite>
